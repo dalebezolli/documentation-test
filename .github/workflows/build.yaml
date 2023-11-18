@@ -1,0 +1,9 @@
+name: Deploy Site
+run-name: Deploy site from external repo
+on: [push]
+jobs:
+	hello-world:
+	runs-on: ubuntu-latest
+	steps:
+		- uses: actions/setup-node@v3
+		- run: node -v
