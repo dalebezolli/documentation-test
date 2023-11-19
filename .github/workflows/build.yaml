@@ -33,8 +33,12 @@ jobs:
           path: .
       - name: Checkout Content
         uses: actions/checkout@v4
+        with:
+          path docs
       - name: Test Log Output
         run: ls -lR
+      - name: Directory
+        run: pwd
 
   deploy:
     environment:
