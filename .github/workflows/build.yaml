@@ -30,15 +30,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: dalebezolli/documentation-base
-          path: tools
+          path: .
       - name: Checkout Content
         uses: actions/checkout@v4
         with:
           path: docs
-      - name: Test Log Output
+      - name: Cleaning Content
+        run: mv ./docs/docs ./docs
+      - name: LS
         run: ls -lR
-      - name: Directory
-        run: pwd
 
   deploy:
     environment:
