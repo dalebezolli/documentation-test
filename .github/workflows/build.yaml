@@ -36,7 +36,8 @@ jobs:
         with:
           path: docs
       - name: Cleaning Content
-        run: mv ./docs/docs ./docs
+        run: mv ./docs/docs/ ./docs/
+        run: rmdir ./docs/docs
       - name: LS
         run: ls -lR
 
