@@ -35,10 +35,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: docs
-      - name: Cleaning Content
-        run: mv ./docs/docs/* ./docs/; rmdir ./docs/docs
-      - name: LS
-        run: ls -lR
+      - name: Prepare Content
+        run: mv ./docs/docs/* ./docs/; rmdir ./docs/docs; ./file-parser
      - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
