@@ -30,11 +30,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: dalebezolli/documentation-base
-          path: .
+          path: tools
       - name: Checkout Content
         uses: actions/checkout@v4
         with:
-          path docs
+          path: docs
       - name: Test Log Output
         run: ls -lR
       - name: Directory
