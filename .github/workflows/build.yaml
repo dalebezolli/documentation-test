@@ -37,7 +37,7 @@ jobs:
           path: docs
       - name: Prepare Content
         run: mv ./docs/docs/* ./docs/; rmdir ./docs/docs; ./file-parser
-     - name: Setup Pages
+      - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
