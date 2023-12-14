@@ -26,17 +26,8 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
-      - name: Checkout Base
-        uses: actions/checkout@v4
-        with:
-          repository: dalebezolli/documentation-base
-          path: .
-      - name: Checkout Content
-        uses: actions/checkout@v4
-        with:
-          path: docs
       - name: Preapare content
-        uses: dalebezolli/documentation-base@62785e328861172d949d73a2a2a1197d956718fa
+        uses: dalebezolli/documentation-base@7184eda3003720d1ee69221eb9ab44724944a77a
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
