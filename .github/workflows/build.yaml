@@ -36,9 +36,9 @@ jobs:
         with:
           path: docs
       - name: Prepare Content
-        run: $([ -e ./docs/config.* ] && rm ./config.* && mv ./docs/config.* ./); mv ./docs/docs/* ./docs/; rmdir ./docs/docs; ./file-parser
+        run: $([ -e ./docs/config.* ] && rm ./config.* && mv ./docs/config.* ./); mv ./docs/docs/* ./docs/; rmdir ./docs/docs
       - name: Test custom action
-        uses: dalebezolli/documentation-base@8d21fa67273cb3d2ed02bce31a4f42938c25bf38
+        uses: dalebezolli/documentation-base@60b7be8aa0aa3cc96df86c35f783bf1f376dc0d5
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
