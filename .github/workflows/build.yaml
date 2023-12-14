@@ -23,7 +23,7 @@ jobs:
       HUGO_VERSION: 0.120.2
     steps:
       - name: Preapare content
-        uses: dalebezolli/documentation-base@8f9cdaa1e68b650e55f613658048d4974d6d94fb
+        uses: dalebezolli/documentation-base@98eb4d0feb9696988c8b5003fb9b35c5a98380fa
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
